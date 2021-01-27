@@ -48,10 +48,9 @@ def write_ply(fn, verts, colors):
 
 if __name__ == '__main__':
     print('loading images...')
-    imgL = ResizeWithAspectRatio(cv2.pyrDown( cv2.imread('im2.png') ), width=800)  # downscale images for faster processing
-    imgR = ResizeWithAspectRatio(cv2.pyrDown( cv2.imread('im3.png') ), width=800)
+    imgL = ResizeWithAspectRatio(cv2.pyrDown( cv2.imread('view1.png') ), width=500)
+    imgR = ResizeWithAspectRatio(cv2.pyrDown( cv2.imread('view5.png') ), width=500)
 
-    # disparity range is tuned for 'aloe' image pair
     window_size =5
     min_disp = 32
     num_disp = 112-min_disp
